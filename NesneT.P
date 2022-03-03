@@ -1,0 +1,50 @@
+class Kullanici:
+    def __init__(self,adi="Gözde",soyadi="Tez",numara=125678):
+        self.adi=adi
+        self.soyadi=soyadi
+        self.numara=numara
+
+    def giris(self):
+        print("Giriş Yapıldı.")
+
+    def cıkıs(self):
+        print("Çıkıs Yapıldı.")
+
+class Akademisyen(Kullanici):
+    def not_ver(self):
+        print("Notlarınız Pazartesi Günü Açıklanacaktır.")
+class Personel(Kullanici):
+    def maas_düzenle(self):
+        print("Düzenlenmiştir.")
+class Ogrenci(Kullanici):
+    def kulube_katıl(self):
+        print("Kayıt Yapılmıştır.")
+
+
+akademisyen=Akademisyen("Mustafa","Kaya",125467)
+personel=Personel("Mehmet","Yıldız",342563)
+ogrenci=Ogrenci("Bilge","Ayvaz",234578)
+print("Akademisyen")
+print(akademisyen.adi)
+print(akademisyen.soyadi)
+print(akademisyen.numara)
+akademisyen.not_ver()
+print("Personel")
+print(personel.adi)
+print(personel.soyadi)
+print(personel.numara)
+personel.maas_düzenle()
+print("Ogrenci")
+print(ogrenci.adi)
+print(ogrenci.soyadi)
+print(ogrenci.numara)
+ogrenci.kulube_katıl()
+print("akademisyen sınıfındasınız."+ str(akademisyen.giris()))
+print("akademisyen sınıfındasınız."+str(akademisyen.cıkıs()))
+print("ogrenci sınıfındasınız."+str(ogrenci.giris()))
+print("ogrenci sınıfındasınız."+str(ogrenci.cıkıs()))
+print("personel sınıfındasınız."+str(personel.giris()))
+print("personel sınıfındasınız."+str(personel.cıkıs()))
+kullanici=Kullanici()
+print(kullanici.giris())
+print(kullanici.cıkıs())
